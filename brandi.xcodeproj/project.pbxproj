@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E977A4D0EC16B664A0D0125 /* Pods_brandi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41651EF8843269E9F841FA96 /* Pods_brandi.framework */; };
+		CE50040227D788F00059B066 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50040127D788F00059B066 /* AppDelegate.swift */; };
+		CE50040427D788F00059B066 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50040327D788F00059B066 /* SceneDelegate.swift */; };
+		CE50040B27D788F20059B066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE50040A27D788F20059B066 /* Assets.xcassets */; };
+		CE50040E27D788F20059B066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE50040C27D788F20059B066 /* LaunchScreen.storyboard */; };
+		CE50041927D788F20059B066 /* brandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50041827D788F20059B066 /* brandiTests.swift */; };
+		CE50042427D788F20059B066 /* brandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50042327D788F20059B066 /* brandiUITests.swift */; };
+		CE50044E27D789850059B066 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50043D27D789850059B066 /* BaseView.swift */; };
+		CE50044F27D789850059B066 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50043E27D789850059B066 /* BaseCollectionView.swift */; };
+		CE50045027D789850059B066 /* BaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50043F27D789850059B066 /* BaseScrollView.swift */; };
+		CE50045127D789850059B066 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044027D789850059B066 /* BaseTableView.swift */; };
+		CE50045227D789850059B066 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044127D789850059B066 /* BaseTableViewCell.swift */; };
+		CE50045327D789850059B066 /* BaseSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044227D789850059B066 /* BaseSearchBar.swift */; };
+		CE50045427D789850059B066 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044327D789850059B066 /* BaseCollectionViewCell.swift */; };
+		CE50045527D789850059B066 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044427D789850059B066 /* BaseButton.swift */; };
+		CE50045627D789850059B066 /* BaseWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044527D789850059B066 /* BaseWebView.swift */; };
+		CE50045727D789850059B066 /* BaseProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044627D789850059B066 /* BaseProgressView.swift */; };
+		CE50045827D789850059B066 /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044727D789850059B066 /* BaseTableController.swift */; };
+		CE50045927D789850059B066 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044827D789850059B066 /* BaseTextField.swift */; };
+		CE50045A27D789850059B066 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044927D789850059B066 /* BaseLabel.swift */; };
+		CE50045B27D789850059B066 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044A27D789850059B066 /* BaseImageView.swift */; };
+		CE50045C27D789850059B066 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044B27D789850059B066 /* BaseController.swift */; };
+		CE50045D27D789850059B066 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044C27D789850059B066 /* BaseNavigationController.swift */; };
+		CE50045E27D789850059B066 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044D27D789850059B066 /* BasePageControl.swift */; };
+		CE50046F27D789B80059B066 /* SearchModuleController+collectionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */; };
+		CE50047027D789B80059B066 /* SearchModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046827D789B80059B066 /* SearchModuleCell.swift */; };
+		CE50047127D789B80059B066 /* SearchModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046927D789B80059B066 /* SearchModuleController.swift */; };
+		CE50047227D789B80059B066 /* SplashModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046B27D789B80059B066 /* SplashModuleController.swift */; };
+		CE50047327D789B80059B066 /* FullImageModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046D27D789B80059B066 /* FullImageModuleController.swift */; };
+		CE50047D27D789D00059B066 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50047C27D789D00059B066 /* ApiService.swift */; };
+		CE50048327D789DC0059B066 /* SearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50048227D789DC0059B066 /* SearchImage.swift */; };
+		CE50048927D789E50059B066 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50048827D789E50059B066 /* Utils.swift */; };
+		CE5004A127D78AB20059B066 /* ImageSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE50041527D788F20059B066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5003F627D788F00059B066 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5003FD27D788F00059B066;
+			remoteInfo = brandi;
+		};
+		CE50042027D788F20059B066 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE5003F627D788F00059B066 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE5003FD27D788F00059B066;
+			remoteInfo = brandi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41651EF8843269E9F841FA96 /* Pods_brandi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_brandi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F06227CCF7A179586D9F130 /* Pods-brandi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.debug.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.debug.xcconfig"; sourceTree = "<group>"; };
+		CE5003FE27D788F00059B066 /* brandi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brandi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE50040127D788F00059B066 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE50040327D788F00059B066 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE50040A27D788F20059B066 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE50040D27D788F20059B066 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE50040F27D788F20059B066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE50041427D788F20059B066 /* brandiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brandiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE50041827D788F20059B066 /* brandiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brandiTests.swift; sourceTree = "<group>"; };
+		CE50041A27D788F20059B066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE50041F27D788F20059B066 /* brandiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brandiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE50042327D788F20059B066 /* brandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brandiUITests.swift; sourceTree = "<group>"; };
+		CE50042527D788F20059B066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE50043D27D789850059B066 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CE50043E27D789850059B066 /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		CE50043F27D789850059B066 /* BaseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseScrollView.swift; sourceTree = "<group>"; };
+		CE50044027D789850059B066 /* BaseTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		CE50044127D789850059B066 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		CE50044227D789850059B066 /* BaseSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSearchBar.swift; sourceTree = "<group>"; };
+		CE50044327D789850059B066 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE50044427D789850059B066 /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		CE50044527D789850059B066 /* BaseWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWebView.swift; sourceTree = "<group>"; };
+		CE50044627D789850059B066 /* BaseProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseProgressView.swift; sourceTree = "<group>"; };
+		CE50044727D789850059B066 /* BaseTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
+		CE50044827D789850059B066 /* BaseTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		CE50044927D789850059B066 /* BaseLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		CE50044A27D789850059B066 /* BaseImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
+		CE50044B27D789850059B066 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		CE50044C27D789850059B066 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		CE50044D27D789850059B066 /* BasePageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageControl.swift; sourceTree = "<group>"; };
+		CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchModuleController+collectionview.swift"; sourceTree = "<group>"; };
+		CE50046827D789B80059B066 /* SearchModuleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModuleCell.swift; sourceTree = "<group>"; };
+		CE50046927D789B80059B066 /* SearchModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModuleController.swift; sourceTree = "<group>"; };
+		CE50046B27D789B80059B066 /* SplashModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashModuleController.swift; sourceTree = "<group>"; };
+		CE50046D27D789B80059B066 /* FullImageModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageModuleController.swift; sourceTree = "<group>"; };
+		CE50047C27D789D00059B066 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		CE50048227D789DC0059B066 /* SearchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImage.swift; sourceTree = "<group>"; };
+		CE50048827D789E50059B066 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchRequest.swift; sourceTree = "<group>"; };
+		E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.release.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE5003FB27D788F00059B066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E977A4D0EC16B664A0D0125 /* Pods_brandi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041127D788F20059B066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041C27D788F20059B066 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A933BC9195E6B4824C2244AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F06227CCF7A179586D9F130 /* Pods-brandi.debug.xcconfig */,
+				E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE5003F527D788F00059B066 = {
+			isa = PBXGroup;
+			children = (
+				CE50040027D788F00059B066 /* brandi */,
+				CE50041727D788F20059B066 /* brandiTests */,
+				CE50042227D788F20059B066 /* brandiUITests */,
+				CE5003FF27D788F00059B066 /* Products */,
+				A933BC9195E6B4824C2244AC /* Pods */,
+				CF75393649A0CF50D8D46037 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE5003FF27D788F00059B066 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE5003FE27D788F00059B066 /* brandi.app */,
+				CE50041427D788F20059B066 /* brandiTests.xctest */,
+				CE50041F27D788F20059B066 /* brandiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE50040027D788F00059B066 /* brandi */ = {
+			isa = PBXGroup;
+			children = (
+				CE50049F27D78AB20059B066 /* Api */,
+				CE50048727D789E50059B066 /* Utils */,
+				CE50048127D789DC0059B066 /* Model */,
+				CE50047B27D789D00059B066 /* Common */,
+				CE50046527D7899B0059B066 /* Module */,
+				CE50043C27D7897C0059B066 /* Base */,
+				CE50040127D788F00059B066 /* AppDelegate.swift */,
+				CE50040327D788F00059B066 /* SceneDelegate.swift */,
+				CE50040A27D788F20059B066 /* Assets.xcassets */,
+				CE50040C27D788F20059B066 /* LaunchScreen.storyboard */,
+				CE50040F27D788F20059B066 /* Info.plist */,
+			);
+			path = brandi;
+			sourceTree = "<group>";
+		};
+		CE50041727D788F20059B066 /* brandiTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE50041827D788F20059B066 /* brandiTests.swift */,
+				CE50041A27D788F20059B066 /* Info.plist */,
+			);
+			path = brandiTests;
+			sourceTree = "<group>";
+		};
+		CE50042227D788F20059B066 /* brandiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE50042327D788F20059B066 /* brandiUITests.swift */,
+				CE50042527D788F20059B066 /* Info.plist */,
+			);
+			path = brandiUITests;
+			sourceTree = "<group>";
+		};
+		CE50043C27D7897C0059B066 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE50044427D789850059B066 /* BaseButton.swift */,
+				CE50043E27D789850059B066 /* BaseCollectionView.swift */,
+				CE50044327D789850059B066 /* BaseCollectionViewCell.swift */,
+				CE50044B27D789850059B066 /* BaseController.swift */,
+				CE50044A27D789850059B066 /* BaseImageView.swift */,
+				CE50044927D789850059B066 /* BaseLabel.swift */,
+				CE50044C27D789850059B066 /* BaseNavigationController.swift */,
+				CE50044D27D789850059B066 /* BasePageControl.swift */,
+				CE50044627D789850059B066 /* BaseProgressView.swift */,
+				CE50043F27D789850059B066 /* BaseScrollView.swift */,
+				CE50044227D789850059B066 /* BaseSearchBar.swift */,
+				CE50044727D789850059B066 /* BaseTableController.swift */,
+				CE50044027D789850059B066 /* BaseTableView.swift */,
+				CE50044127D789850059B066 /* BaseTableViewCell.swift */,
+				CE50044827D789850059B066 /* BaseTextField.swift */,
+				CE50043D27D789850059B066 /* BaseView.swift */,
+				CE50044527D789850059B066 /* BaseWebView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE50046527D7899B0059B066 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				CE50046C27D789B80059B066 /* FullImageModule */,
+				CE50046627D789B80059B066 /* SearchModule */,
+				CE50046A27D789B80059B066 /* SplashModule */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		CE50046627D789B80059B066 /* SearchModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */,
+				CE50046827D789B80059B066 /* SearchModuleCell.swift */,
+				CE50046927D789B80059B066 /* SearchModuleController.swift */,
+			);
+			path = SearchModule;
+			sourceTree = "<group>";
+		};
+		CE50046A27D789B80059B066 /* SplashModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE50046B27D789B80059B066 /* SplashModuleController.swift */,
+			);
+			path = SplashModule;
+			sourceTree = "<group>";
+		};
+		CE50046C27D789B80059B066 /* FullImageModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE50046D27D789B80059B066 /* FullImageModuleController.swift */,
+			);
+			path = FullImageModule;
+			sourceTree = "<group>";
+		};
+		CE50047B27D789D00059B066 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE50047C27D789D00059B066 /* ApiService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE50048127D789DC0059B066 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE50048227D789DC0059B066 /* SearchImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE50048727D789E50059B066 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE50048827D789E50059B066 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE50049F27D78AB20059B066 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		CF75393649A0CF50D8D46037 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41651EF8843269E9F841FA96 /* Pods_brandi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE5003FD27D788F00059B066 /* brandi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE50042827D788F20059B066 /* Build configuration list for PBXNativeTarget "brandi" */;
+			buildPhases = (
+				152E48B889907B75BC28C626 /* [CP] Check Pods Manifest.lock */,
+				CE5003FA27D788F00059B066 /* Sources */,
+				CE5003FB27D788F00059B066 /* Frameworks */,
+				CE5003FC27D788F00059B066 /* Resources */,
+				C5907C25F5634EC27BD24A0A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = brandi;
+			productName = brandi;
+			productReference = CE5003FE27D788F00059B066 /* brandi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE50041327D788F20059B066 /* brandiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE50042B27D788F20059B066 /* Build configuration list for PBXNativeTarget "brandiTests" */;
+			buildPhases = (
+				CE50041027D788F20059B066 /* Sources */,
+				CE50041127D788F20059B066 /* Frameworks */,
+				CE50041227D788F20059B066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE50041627D788F20059B066 /* PBXTargetDependency */,
+			);
+			name = brandiTests;
+			productName = brandiTests;
+			productReference = CE50041427D788F20059B066 /* brandiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE50041E27D788F20059B066 /* brandiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE50042E27D788F20059B066 /* Build configuration list for PBXNativeTarget "brandiUITests" */;
+			buildPhases = (
+				CE50041B27D788F20059B066 /* Sources */,
+				CE50041C27D788F20059B066 /* Frameworks */,
+				CE50041D27D788F20059B066 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE50042127D788F20059B066 /* PBXTargetDependency */,
+			);
+			name = brandiUITests;
+			productName = brandiUITests;
+			productReference = CE50041F27D788F20059B066 /* brandiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE5003F627D788F00059B066 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CE5003FD27D788F00059B066 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CE50041327D788F20059B066 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CE5003FD27D788F00059B066;
+					};
+					CE50041E27D788F20059B066 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CE5003FD27D788F00059B066;
+					};
+				};
+			};
+			buildConfigurationList = CE5003F927D788F00059B066 /* Build configuration list for PBXProject "brandi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE5003F527D788F00059B066;
+			productRefGroup = CE5003FF27D788F00059B066 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE5003FD27D788F00059B066 /* brandi */,
+				CE50041327D788F20059B066 /* brandiTests */,
+				CE50041E27D788F20059B066 /* brandiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE5003FC27D788F00059B066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE50040E27D788F20059B066 /* LaunchScreen.storyboard in Resources */,
+				CE50040B27D788F20059B066 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041227D788F20059B066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041D27D788F20059B066 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		152E48B889907B75BC28C626 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-brandi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5907C25F5634EC27BD24A0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brandi/Pods-brandi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-brandi/Pods-brandi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-brandi/Pods-brandi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE5003FA27D788F00059B066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE50045227D789850059B066 /* BaseTableViewCell.swift in Sources */,
+				CE50045027D789850059B066 /* BaseScrollView.swift in Sources */,
+				CE50045127D789850059B066 /* BaseTableView.swift in Sources */,
+				CE50048927D789E50059B066 /* Utils.swift in Sources */,
+				CE50047027D789B80059B066 /* SearchModuleCell.swift in Sources */,
+				CE50048327D789DC0059B066 /* SearchImage.swift in Sources */,
+				CE50047127D789B80059B066 /* SearchModuleController.swift in Sources */,
+				CE50045627D789850059B066 /* BaseWebView.swift in Sources */,
+				CE50045A27D789850059B066 /* BaseLabel.swift in Sources */,
+				CE50045D27D789850059B066 /* BaseNavigationController.swift in Sources */,
+				CE50045827D789850059B066 /* BaseTableController.swift in Sources */,
+				CE50040227D788F00059B066 /* AppDelegate.swift in Sources */,
+				CE50045527D789850059B066 /* BaseButton.swift in Sources */,
+				CE50047227D789B80059B066 /* SplashModuleController.swift in Sources */,
+				CE50046F27D789B80059B066 /* SearchModuleController+collectionview.swift in Sources */,
+				CE50045427D789850059B066 /* BaseCollectionViewCell.swift in Sources */,
+				CE50047327D789B80059B066 /* FullImageModuleController.swift in Sources */,
+				CE50045C27D789850059B066 /* BaseController.swift in Sources */,
+				CE50040427D788F00059B066 /* SceneDelegate.swift in Sources */,
+				CE50045E27D789850059B066 /* BasePageControl.swift in Sources */,
+				CE50044E27D789850059B066 /* BaseView.swift in Sources */,
+				CE50047D27D789D00059B066 /* ApiService.swift in Sources */,
+				CE50045B27D789850059B066 /* BaseImageView.swift in Sources */,
+				CE50044F27D789850059B066 /* BaseCollectionView.swift in Sources */,
+				CE50045927D789850059B066 /* BaseTextField.swift in Sources */,
+				CE5004A127D78AB20059B066 /* ImageSearchRequest.swift in Sources */,
+				CE50045727D789850059B066 /* BaseProgressView.swift in Sources */,
+				CE50045327D789850059B066 /* BaseSearchBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041027D788F20059B066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE50041927D788F20059B066 /* brandiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE50041B27D788F20059B066 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE50042427D788F20059B066 /* brandiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE50041627D788F20059B066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5003FD27D788F00059B066 /* brandi */;
+			targetProxy = CE50041527D788F20059B066 /* PBXContainerItemProxy */;
+		};
+		CE50042127D788F20059B066 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE5003FD27D788F00059B066 /* brandi */;
+			targetProxy = CE50042027D788F20059B066 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE50040C27D788F20059B066 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE50040D27D788F20059B066 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE50042627D788F20059B066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE50042727D788F20059B066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE50042927D788F20059B066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F06227CCF7A179586D9F130 /* Pods-brandi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE50042A27D788F20059B066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE50042C27D788F20059B066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brandi.app/brandi";
+			};
+			name = Debug;
+		};
+		CE50042D27D788F20059B066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/brandi.app/brandi";
+			};
+			name = Release;
+		};
+		CE50042F27D788F20059B066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = brandi;
+			};
+			name = Debug;
+		};
+		CE50043027D788F20059B066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = brandiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sky.brandiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = brandi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE5003F927D788F00059B066 /* Build configuration list for PBXProject "brandi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE50042627D788F20059B066 /* Debug */,
+				CE50042727D788F20059B066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE50042827D788F20059B066 /* Build configuration list for PBXNativeTarget "brandi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE50042927D788F20059B066 /* Debug */,
+				CE50042A27D788F20059B066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE50042B27D788F20059B066 /* Build configuration list for PBXNativeTarget "brandiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE50042C27D788F20059B066 /* Debug */,
+				CE50042D27D788F20059B066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE50042E27D788F20059B066 /* Build configuration list for PBXNativeTarget "brandiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE50042F27D788F20059B066 /* Debug */,
+				CE50043027D788F20059B066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE5003F627D788F00059B066 /* Project object */;
+}
