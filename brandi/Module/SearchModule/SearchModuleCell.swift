@@ -7,6 +7,8 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxKingfisher
 import Kingfisher
 
 class SearchModuleCell: BaseCollectionViewCell {
@@ -16,32 +18,27 @@ class SearchModuleCell: BaseCollectionViewCell {
         didSet {
             guard let document:SearchImage = document else { return }
             
-            Observable.of(document.thumbnail_url).flatMap { (url:String) -> Observable<UIImage?> in
-                guard let url:URL = URL(string: url) else {
-                    return .empty()
-                }
-
-                do {
-                    let data:Data = try Data(contentsOf: url)
-                    
-                    let image:UIImage? = UIImage(data: data)
-                    
-                    return .just(image)
-                } catch {
-                    return .just(nil)
-                }
-            }.bind(to: self.itemImageView.rx.image)
-            .disposed(by: self.disposeBag)
+            Observable.of(document.thumbnail_url)
+                .map { URL(string: $0) }
+                .bind(to: self.itemImageView.kf.rx.image(placeholder: UIImage(named: "empty"), options: nil))
+                .disposed(by: self.disposeBag)
         }
     }
     
-    private let itemImageView:BaseImageView = BaseImageView()
+    private let itemImageView:UIImageView = {
+        let imageView:UIImageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        return imageView
+    }()
     
     // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.contentView.addSubview(self.itemImageView)
+        self.contentView.addSubViews([
+            self.itemImageView
+        ])
         
         self.setupLayouts()
         self.bindUI()

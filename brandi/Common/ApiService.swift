@@ -28,9 +28,10 @@ enum APIType {
 extension ApiRequest {
     func request(with baseURL: URL) -> URLRequest {
         guard var components:URLComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false) else {
-            fatalError("Unable to create URL compoenents")
+            fatalError("URL 컴포넌트 생성 실패")
         }
 
+        // GET 형식일 경우 쿼리 추가
         if self.method == .get {
             components.queryItems = self.parameters.map {
                 URLQueryItem(name: String($0), value: $1 as? String ?? "")
@@ -38,16 +39,15 @@ extension ApiRequest {
         }
 
         guard let url:URL = components.url else {
-            fatalError("Could not get url")
+            fatalError("URL 가져오기 실패")
         }
         
         let request : URLRequest = {
             var request = URLRequest(url: url)
             request.httpMethod = self.method.rawValue
-//            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//            request.addValue("application/json", forHTTPHeaderField: "accept")
-            request.headers = HTTPHeaders(["Authorization": "KakaoAK fcdf5e9b8d6a2ae3c54a1920dce8c10b"])
+            request.headers = HTTPHeaders(["Authorization": Utils.shared.KAKAO_API_KEY])
             
+            // GET이 아닐 경우 Serialization 후 body에 추가
             if self.method != .get {
                 do {
                     request.httpBody = try JSONSerialization.data(withJSONObject: self.parameters, options: .sortedKeys)
@@ -62,17 +62,17 @@ extension ApiRequest {
 }
 
 class ApiService {
+    // 기본 URL
     private let baseURL:URL = URL(string: "https://dapi.kakao.com/v2/search/image")!
     
     func request<T: Codable>(apiRequest: ApiRequest) -> Observable<T> {
         return Observable.create { (observer:AnyObserver) in
             let request:URLRequest = apiRequest.request(with: self.baseURL)
-            print(request.url?.absoluteString)
+
             let dataRequest = AF.request(request).responseData { (response:AFDataResponse<Data>) in
                 switch response.result {
                     case .success(let data):
                         do {
-                            print(String(data: data, encoding: String.Encoding.utf8))
                             let model:T = try JSONDecoder().decode(T.self, from: data)
                             observer.onNext(model)
                         } catch let error {

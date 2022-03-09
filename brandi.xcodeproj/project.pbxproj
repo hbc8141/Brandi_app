@@ -29,7 +29,6 @@
 		CE50045A27D789850059B066 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044927D789850059B066 /* BaseLabel.swift */; };
 		CE50045B27D789850059B066 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044A27D789850059B066 /* BaseImageView.swift */; };
 		CE50045C27D789850059B066 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044B27D789850059B066 /* BaseController.swift */; };
-		CE50045D27D789850059B066 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044C27D789850059B066 /* BaseNavigationController.swift */; };
 		CE50045E27D789850059B066 /* BasePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044D27D789850059B066 /* BasePageControl.swift */; };
 		CE50046F27D789B80059B066 /* SearchModuleController+collectionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */; };
 		CE50047027D789B80059B066 /* SearchModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046827D789B80059B066 /* SearchModuleCell.swift */; };
@@ -40,6 +39,12 @@
 		CE50048327D789DC0059B066 /* SearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50048227D789DC0059B066 /* SearchImage.swift */; };
 		CE50048927D789E50059B066 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50048827D789E50059B066 /* Utils.swift */; };
 		CE5004A127D78AB20059B066 /* ImageSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */; };
+		CE5004B227D87AEC0059B066 /* SearchModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004B127D87AEC0059B066 /* SearchModuleViewModel.swift */; };
+		CE5004B727D87B410059B066 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004B627D87B410059B066 /* UIView+extension.swift */; };
+		CE5004BC27D87F910059B066 /* FullImageModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */; };
+		CE5004C327D883480059B066 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044C27D789850059B066 /* BaseNavigationController.swift */; };
+		CE5004C927D884070059B066 /* LoadingModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004C827D884070059B066 /* LoadingModuleController.swift */; };
+		CE73087D27D8AD9E0022EE19 /* UIScrollView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +105,11 @@
 		CE50048227D789DC0059B066 /* SearchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImage.swift; sourceTree = "<group>"; };
 		CE50048827D789E50059B066 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSearchRequest.swift; sourceTree = "<group>"; };
+		CE5004B127D87AEC0059B066 /* SearchModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModuleViewModel.swift; sourceTree = "<group>"; };
+		CE5004B627D87B410059B066 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageModuleViewModel.swift; sourceTree = "<group>"; };
+		CE5004C827D884070059B066 /* LoadingModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModuleController.swift; sourceTree = "<group>"; };
+		CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+extension.swift"; sourceTree = "<group>"; };
 		E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.release.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,11 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				CE50049F27D78AB20059B066 /* Api */,
-				CE50048727D789E50059B066 /* Utils */,
 				CE50048127D789DC0059B066 /* Model */,
 				CE50047B27D789D00059B066 /* Common */,
 				CE50046527D7899B0059B066 /* Module */,
-				CE50043C27D7897C0059B066 /* Base */,
 				CE50040127D788F00059B066 /* AppDelegate.swift */,
 				CE50040327D788F00059B066 /* SceneDelegate.swift */,
 				CE50040A27D788F20059B066 /* Assets.xcassets */,
@@ -223,6 +231,7 @@
 		CE50046527D7899B0059B066 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				CE5004C727D883FB0059B066 /* LoadingModule */,
 				CE50046C27D789B80059B066 /* FullImageModule */,
 				CE50046627D789B80059B066 /* SearchModule */,
 				CE50046A27D789B80059B066 /* SplashModule */,
@@ -236,6 +245,7 @@
 				CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */,
 				CE50046827D789B80059B066 /* SearchModuleCell.swift */,
 				CE50046927D789B80059B066 /* SearchModuleController.swift */,
+				CE5004B127D87AEC0059B066 /* SearchModuleViewModel.swift */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -252,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				CE50046D27D789B80059B066 /* FullImageModuleController.swift */,
+				CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */,
 			);
 			path = FullImageModule;
 			sourceTree = "<group>";
@@ -259,7 +270,11 @@
 		CE50047B27D789D00059B066 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CE50043C27D7897C0059B066 /* Base */,
+				CE50048827D789E50059B066 /* Utils.swift */,
 				CE50047C27D789D00059B066 /* ApiService.swift */,
+				CE5004B627D87B410059B066 /* UIView+extension.swift */,
+				CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -272,20 +287,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CE50048727D789E50059B066 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				CE50048827D789E50059B066 /* Utils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		CE50049F27D78AB20059B066 /* Api */ = {
 			isa = PBXGroup;
 			children = (
 				CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		CE5004C727D883FB0059B066 /* LoadingModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE5004C827D884070059B066 /* LoadingModuleController.swift */,
+			);
+			path = LoadingModule;
 			sourceTree = "<group>";
 		};
 		CF75393649A0CF50D8D46037 /* Frameworks */ = {
@@ -469,16 +484,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5004C927D884070059B066 /* LoadingModuleController.swift in Sources */,
+				CE5004C327D883480059B066 /* BaseNavigationController.swift in Sources */,
+				CE5004B727D87B410059B066 /* UIView+extension.swift in Sources */,
 				CE50045227D789850059B066 /* BaseTableViewCell.swift in Sources */,
+				CE5004B227D87AEC0059B066 /* SearchModuleViewModel.swift in Sources */,
 				CE50045027D789850059B066 /* BaseScrollView.swift in Sources */,
 				CE50045127D789850059B066 /* BaseTableView.swift in Sources */,
 				CE50048927D789E50059B066 /* Utils.swift in Sources */,
 				CE50047027D789B80059B066 /* SearchModuleCell.swift in Sources */,
+				CE5004BC27D87F910059B066 /* FullImageModuleViewModel.swift in Sources */,
 				CE50048327D789DC0059B066 /* SearchImage.swift in Sources */,
 				CE50047127D789B80059B066 /* SearchModuleController.swift in Sources */,
 				CE50045627D789850059B066 /* BaseWebView.swift in Sources */,
+				CE73087D27D8AD9E0022EE19 /* UIScrollView+extension.swift in Sources */,
 				CE50045A27D789850059B066 /* BaseLabel.swift in Sources */,
-				CE50045D27D789850059B066 /* BaseNavigationController.swift in Sources */,
 				CE50045827D789850059B066 /* BaseTableController.swift in Sources */,
 				CE50040227D788F00059B066 /* AppDelegate.swift in Sources */,
 				CE50045527D789850059B066 /* BaseButton.swift in Sources */,

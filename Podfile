@@ -12,7 +12,7 @@ target 'brandi' do
     pod 'RxCocoa', '6.5.0'
 
     # Image Cache
-    pod 'Kingfisher', '~> 7.0'
+    pod 'RxKingfisher'
 
     # Network
     pod 'Alamofire', '~> 5.5'

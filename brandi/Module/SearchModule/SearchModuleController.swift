@@ -12,25 +12,34 @@ import RxCocoa
 class SearchModuleController: BaseController {
     
     // MARK: - Properties
+    // 검색 바
     private let searchBar:BaseSearchBar = BaseSearchBar()
 
+    // 검색하여 반환된 이미지 표시
     private let searchResultCollectionView:BaseCollectionView = BaseCollectionView(cellClass: SearchModuleCell.self, forCellWithReuseIdentifier: "cell")
 
+    // 결과값이 없을 경우 결과값 없음 반환ㄴ
     private let notResultLabel:BaseLabel = BaseLabel(title: "결과가 없습니다.", textAlignment: .center)
+
+    // ViewModel
+    private let viewModel:SearchModuleViewModel = SearchModuleViewModel()
     
-    private var searchImages:BehaviorSubject<[SearchImage]> = BehaviorSubject<[SearchImage]>(value: [])
-
-    private let apiService:ApiService = ApiService()
-
+    private let startLoadingOffset: CGFloat = 10.0
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.notResultLabel.isHidden = true
-        
-        self.view.addSubview(self.searchBar)
-        self.view.addSubview(self.searchResultCollectionView)
-        self.view.addSubview(self.notResultLabel)
+
+        // 네비게이션 바 숨김
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+
+        self.view.addSubViews([
+            self.searchBar,
+            self.searchResultCollectionView,
+            self.notResultLabel
+        ])
 
         self.setupLayouts()
         self.bindUI()
@@ -38,63 +47,37 @@ class SearchModuleController: BaseController {
 
     // MARK: - Function
     override func bindUI() {
-        let searchResult = self.searchBar.rx.text.orEmpty
+        // 검색어를 ViewModel과 바인딩
+        self.searchBar.rx.text.orEmpty
+            // 무분별한 입력 방지
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            // 입력 완료 1초 뒤 반응
+            .debounce(.seconds(1), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
-            .flatMap { (query:String) -> Observable<Document?> in
-                if query.isEmpty {
-                    return .just(nil)
-                }
-
-                let request:ImageSearchRequest = ImageSearchRequest(query: query)
-
-                let response:Observable<Document?> = self.apiService.request(apiRequest: request)
-
-                return response
-            }
-            .flatMap({ (document:Document?) -> Observable<[SearchImage]> in
-                guard let document:Document = document else {
-                    return .just([])
-                }
-                
-                guard let images:[SearchImage] = document.documents else {
-                    return .just([])
-                }
-                
-                return .just(images)
-            })
-            .observe(on: MainScheduler.instance)
-            .share()
+            .bind(to: self.viewModel.searchQuery)
+            .disposed(by: self.disposeBag)
         
-        searchResult.bind(to: self.searchImages)
+        // Delegate 설정
+        self.searchResultCollectionView.rx.setDelegate(self)
             .disposed(by: self.disposeBag)
         
         // 결과값이 없을 경우 결과값 없음 표시
-        self.searchImages.map { $0.count == 0 ? false : true }
+        self.viewModel.notResultOb
             .bind(to: self.notResultLabel.rx.isHidden)
             .disposed(by: self.disposeBag)
 
         // 결과값이 있을 경우 collectionView에 표시
-        self.searchImages.bind(to: self.searchResultCollectionView.rx.items(cellIdentifier: "cell", cellType: SearchModuleCell.self)) { (row:Int, searchImage:SearchImage, cell:SearchModuleCell) in
+        self.viewModel.searchImages.bind(to: self.searchResultCollectionView.rx.items(cellIdentifier: "cell", cellType: SearchModuleCell.self)) { (row:Int, searchImage:SearchImage, cell:SearchModuleCell) in
             cell.document = searchImage
         }
         .disposed(by: self.disposeBag)
 
-        self.searchResultCollectionView.rx.setDelegate(self)
-            .disposed(by: self.disposeBag)
-
-        // 아이템 선택 시
+        // 아이템 선택 시 이미지 전체화면 페이지로 이동
         self.searchResultCollectionView.rx.modelSelected(SearchImage.self)
             .bind(onNext: { (image:SearchImage) in
                 let fullImageController:FullImageModuleController = FullImageModuleController(searchImage: image)
                 
-                self.pushViewController(fullImageController)
-            }).disposed(by: self.disposeBag)
-
-        self.searchResultCollectionView.rx.itemSelected
-            .map { $0.row }
-            .bind(onNext: { (row:Int) in
-
+                self.present(fullImageController, animated: true, completion: nil)
             }).disposed(by: self.disposeBag)
     }
     

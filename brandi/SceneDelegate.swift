@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene:UIWindowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: scene)
+        
         self.window?.rootViewController = BaseNavigationController(rootViewController: SearchModuleController())
+
         self.window?.makeKeyAndVisible()
     }
 

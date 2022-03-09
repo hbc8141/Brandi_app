@@ -58,5 +58,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>KAKAO_IMAGE_API_KEY</key>
+	<string>KakaoAK fcdf5e9b8d6a2ae3c54a1920dce8c10b</string>
 </dict>
 </plist>
