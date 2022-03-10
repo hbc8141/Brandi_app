@@ -33,7 +33,6 @@
 		CE50046F27D789B80059B066 /* SearchModuleController+collectionview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */; };
 		CE50047027D789B80059B066 /* SearchModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046827D789B80059B066 /* SearchModuleCell.swift */; };
 		CE50047127D789B80059B066 /* SearchModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046927D789B80059B066 /* SearchModuleController.swift */; };
-		CE50047227D789B80059B066 /* SplashModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046B27D789B80059B066 /* SplashModuleController.swift */; };
 		CE50047327D789B80059B066 /* FullImageModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50046D27D789B80059B066 /* FullImageModuleController.swift */; };
 		CE50047D27D789D00059B066 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50047C27D789D00059B066 /* ApiService.swift */; };
 		CE50048327D789DC0059B066 /* SearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50048227D789DC0059B066 /* SearchImage.swift */; };
@@ -43,7 +42,6 @@
 		CE5004B727D87B410059B066 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004B627D87B410059B066 /* UIView+extension.swift */; };
 		CE5004BC27D87F910059B066 /* FullImageModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */; };
 		CE5004C327D883480059B066 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044C27D789850059B066 /* BaseNavigationController.swift */; };
-		CE5004C927D884070059B066 /* LoadingModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004C827D884070059B066 /* LoadingModuleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +96,6 @@
 		CE50046727D789B80059B066 /* SearchModuleController+collectionview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchModuleController+collectionview.swift"; sourceTree = "<group>"; };
 		CE50046827D789B80059B066 /* SearchModuleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModuleCell.swift; sourceTree = "<group>"; };
 		CE50046927D789B80059B066 /* SearchModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModuleController.swift; sourceTree = "<group>"; };
-		CE50046B27D789B80059B066 /* SplashModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashModuleController.swift; sourceTree = "<group>"; };
 		CE50046D27D789B80059B066 /* FullImageModuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageModuleController.swift; sourceTree = "<group>"; };
 		CE50047C27D789D00059B066 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		CE50048227D789DC0059B066 /* SearchImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchImage.swift; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 		CE5004B127D87AEC0059B066 /* SearchModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModuleViewModel.swift; sourceTree = "<group>"; };
 		CE5004B627D87B410059B066 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageModuleViewModel.swift; sourceTree = "<group>"; };
-		CE5004C827D884070059B066 /* LoadingModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModuleController.swift; sourceTree = "<group>"; };
 		E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.release.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,10 +225,8 @@
 		CE50046527D7899B0059B066 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				CE5004C727D883FB0059B066 /* LoadingModule */,
 				CE50046C27D789B80059B066 /* FullImageModule */,
 				CE50046627D789B80059B066 /* SearchModule */,
-				CE50046A27D789B80059B066 /* SplashModule */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -246,14 +240,6 @@
 				CE5004B127D87AEC0059B066 /* SearchModuleViewModel.swift */,
 			);
 			path = SearchModule;
-			sourceTree = "<group>";
-		};
-		CE50046A27D789B80059B066 /* SplashModule */ = {
-			isa = PBXGroup;
-			children = (
-				CE50046B27D789B80059B066 /* SplashModuleController.swift */,
-			);
-			path = SplashModule;
 			sourceTree = "<group>";
 		};
 		CE50046C27D789B80059B066 /* FullImageModule */ = {
@@ -290,14 +276,6 @@
 				CE5004A027D78AB20059B066 /* ImageSearchRequest.swift */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		CE5004C727D883FB0059B066 /* LoadingModule */ = {
-			isa = PBXGroup;
-			children = (
-				CE5004C827D884070059B066 /* LoadingModuleController.swift */,
-			);
-			path = LoadingModule;
 			sourceTree = "<group>";
 		};
 		CF75393649A0CF50D8D46037 /* Frameworks */ = {
@@ -481,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE5004C927D884070059B066 /* LoadingModuleController.swift in Sources */,
 				CE5004C327D883480059B066 /* BaseNavigationController.swift in Sources */,
 				CE5004B727D87B410059B066 /* UIView+extension.swift in Sources */,
 				CE50045227D789850059B066 /* BaseTableViewCell.swift in Sources */,
@@ -498,7 +475,6 @@
 				CE50045827D789850059B066 /* BaseTableController.swift in Sources */,
 				CE50040227D788F00059B066 /* AppDelegate.swift in Sources */,
 				CE50045527D789850059B066 /* BaseButton.swift in Sources */,
-				CE50047227D789B80059B066 /* SplashModuleController.swift in Sources */,
 				CE50046F27D789B80059B066 /* SearchModuleController+collectionview.swift in Sources */,
 				CE50045427D789850059B066 /* BaseCollectionViewCell.swift in Sources */,
 				CE50047327D789B80059B066 /* FullImageModuleController.swift in Sources */,
