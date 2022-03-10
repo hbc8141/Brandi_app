@@ -5,7 +5,7 @@
 //  Created by User on 2022/03/08.
 //
 
-import Foundation
+import UIKit
 
 class Utils: NSObject {
 
@@ -36,5 +36,24 @@ class Utils: NSObject {
         let convertDateStr:String = formatter.string(from: date)
         
         return convertDateStr
+    }
+    
+    // 스크롤 뷰가 바닥 아래로 닿는 부분 감지
+    func isNearBottomEdge(offset: CGPoint, collectionView: UICollectionView) -> Bool {
+        // Y 위치
+        let yPos:CGFloat = offset.y
+        
+        // 스크롤뷰 높이
+        let scrollViewHeight:CGFloat = collectionView.frame.height
+        
+        // 컨텐트 높이
+        let contentHeight:CGFloat = collectionView.contentSize.height  == 0 ? UIScreen.main.bounds.height : collectionView.contentSize.height
+        
+        print("yPos : \(yPos)")
+        print("contentHeight : \(contentHeight)")
+        print("scrollViewHeight : \(scrollViewHeight)")
+        
+        // Y 위치와 스크롤뷰 높이, 시작점 이 스크롤뷰의 컨텐트 보다 클 경우
+        return yPos + scrollViewHeight + 20 > contentHeight
     }
 }

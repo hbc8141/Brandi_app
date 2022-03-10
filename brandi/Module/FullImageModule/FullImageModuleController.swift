@@ -14,7 +14,7 @@ class FullImageModuleController: BaseController {
     // MARK: - Properties
     private let closeButton:BaseButton = BaseButton(title: "X")
     
-    private lazy var imageScrollView:BaseScrollView = BaseScrollView(frame: self.contentView.bounds)
+    private lazy var imageScrollView:BaseScrollView = BaseScrollView()
     
     private let contentView:BaseView = BaseView()
     
@@ -49,6 +49,7 @@ class FullImageModuleController: BaseController {
 
         self.view.backgroundColor = .black
         
+        // 스크롤 뷰의 높이를 유동적으로 되게금 변경
         self.imageScrollView.autoresizingMask = .flexibleHeight
         self.imageScrollView.bounces = true
 
@@ -122,11 +123,11 @@ class FullImageModuleController: BaseController {
     
     override func setupLayouts() {
         NSLayoutConstraint.activate([
-            self.closeButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 5),
+            self.closeButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 5),
             self.closeButton.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -5),
             self.closeButton.widthAnchor.constraint(equalToConstant: 50),
             self.closeButton.heightAnchor.constraint(equalToConstant: 50),
-            
+
             self.imageScrollView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.imageScrollView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.imageScrollView.rightAnchor.constraint(equalTo: self.view.rightAnchor),

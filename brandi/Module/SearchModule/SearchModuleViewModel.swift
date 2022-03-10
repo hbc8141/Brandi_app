@@ -21,6 +21,10 @@ class SearchModuleViewModel {
     // 검색 결과가 없을 시 결과 없음 표시 변수
     let notResultOb:BehaviorSubject<Bool> = BehaviorSubject<Bool>(value: true)
     
+    let isLoadingOb:BehaviorSubject<Bool> = BehaviorSubject<Bool>(value: false)
+
+    private var page:Int = 1
+    
     // API 요청 클래스
     private let apiService:ApiService = ApiService()
     
@@ -38,18 +42,17 @@ class SearchModuleViewModel {
     
     // 이미지 검색
     private func fetchSearchImage() -> Void {
-        self.searchQuery.flatMap { (query:String) -> Observable<Document?> in
+        self.searchQuery
+        .flatMapLatest { (query:String) ->  Observable<Document?> in
             // 검색 쿼리가 없을 경우 nil 반환
             if query.isEmpty {
                 return .just(nil)
             }
 
             // 요청 및 반환
-            let request:ImageSearchRequest = ImageSearchRequest(query: query)
+            let request:ImageSearchRequest = ImageSearchRequest(query: query, page: self.page)
 
-            let response:Observable<Document?> = self.apiService.request(apiRequest: request)
-
-            return response
+            return self.apiService.request(apiRequest: request)
         }
         .flatMap({ (document:Document?) -> Observable<[SearchImage]> in
             // 요청 반환값이 없을 경우 빈 배열로 반환

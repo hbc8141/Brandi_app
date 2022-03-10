@@ -46,7 +46,7 @@ extension ApiRequest {
             var request = URLRequest(url: url)
             request.httpMethod = self.method.rawValue
             request.headers = HTTPHeaders(["Authorization": Utils.shared.KAKAO_API_KEY])
-            
+
             // GET이 아닐 경우 Serialization 후 body에 추가
             if self.method != .get {
                 do {

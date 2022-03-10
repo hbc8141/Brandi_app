@@ -44,7 +44,6 @@
 		CE5004BC27D87F910059B066 /* FullImageModuleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */; };
 		CE5004C327D883480059B066 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50044C27D789850059B066 /* BaseNavigationController.swift */; };
 		CE5004C927D884070059B066 /* LoadingModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5004C827D884070059B066 /* LoadingModuleController.swift */; };
-		CE73087D27D8AD9E0022EE19 /* UIScrollView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +108,6 @@
 		CE5004B627D87B410059B066 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		CE5004BB27D87F910059B066 /* FullImageModuleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageModuleViewModel.swift; sourceTree = "<group>"; };
 		CE5004C827D884070059B066 /* LoadingModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingModuleController.swift; sourceTree = "<group>"; };
-		CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+extension.swift"; sourceTree = "<group>"; };
 		E67BFF6B28D9F24F81DDA0BF /* Pods-brandi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.release.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -274,7 +272,6 @@
 				CE50048827D789E50059B066 /* Utils.swift */,
 				CE50047C27D789D00059B066 /* ApiService.swift */,
 				CE5004B627D87B410059B066 /* UIView+extension.swift */,
-				CE73087C27D8AD9E0022EE19 /* UIScrollView+extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -497,7 +494,6 @@
 				CE50048327D789DC0059B066 /* SearchImage.swift in Sources */,
 				CE50047127D789B80059B066 /* SearchModuleController.swift in Sources */,
 				CE50045627D789850059B066 /* BaseWebView.swift in Sources */,
-				CE73087D27D8AD9E0022EE19 /* UIScrollView+extension.swift in Sources */,
 				CE50045A27D789850059B066 /* BaseLabel.swift in Sources */,
 				CE50045827D789850059B066 /* BaseTableController.swift in Sources */,
 				CE50040227D788F00059B066 /* AppDelegate.swift in Sources */,
